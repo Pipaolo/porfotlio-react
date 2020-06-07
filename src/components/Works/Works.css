@@ -1,0 +1,34 @@
+.works {
+  color: white;
+  background-color: #303a52;
+  padding: 6.5em 0;
+}
+.works-header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+.works-header {
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.works-header:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 80px;
+  background: #fc85ae;
+  border-radius: 100px;
+  left: 50%;
+  top: -10px;
+  margin-left: -40px;
+}
+
+@media (min-width: 1000px) {
+  .works {
+    height: 100vh;
+  }
+}

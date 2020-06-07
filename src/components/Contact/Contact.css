@@ -1,0 +1,142 @@
+.contact {
+  color: white;
+  height: 100vh;
+  background-color: #4b5878;
+  padding: 5em 1em;
+}
+
+.contact-info {
+  display: none;
+  align-self: flex-start;
+  margin-left: 9.5vw;
+}
+
+.contact li {
+  display: flex;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact li i {
+  color: #fc85ae;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-header {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.contact-header:before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 80px;
+  background: #fc85ae;
+  border-radius: 100px;
+  left: 50%;
+  margin-left: -40px;
+  top: -12px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 450px;
+  margin-top: 2em;
+}
+
+.contact-form input {
+  color: white;
+  background-color: #303a52;
+  border: 2px solid #fc85ae;
+  border-radius: 20px;
+  padding: 8px;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+  align-self: stretch;
+}
+
+.contact-form textarea {
+  color: white;
+  background-color: #303a52;
+  border: 2px solid #fc85ae;
+  border-radius: 20px;
+  padding: 8px;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+}
+
+.contact-form button {
+  background-color: #fc85ae;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  align-self: center;
+}
+
+.contact-form label {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.contact-form textarea:focus,
+.contact-form input:focus {
+  outline: none;
+  border: 2px solid #fc85ae;
+  border-radius: 20px;
+}
+
+.contact-form .status-text {
+  font-weight: bold;
+  align-self: center;
+}
+
+.contact-form .error {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: -12px;
+  margin-left: 12px;
+}
+
+@media (min-width: 1000px) {
+  .contact-info {
+    display: block;
+    align-self: center;
+  }
+
+  .contact-form-wrapper {
+    height: 100%;
+    margin: -2em 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-header:before {
+    width: 110px;
+    left: 50%;
+    margin-left: -55px;
+  }
+
+  .contact-header {
+    font-size: 3rem;
+  }
+}

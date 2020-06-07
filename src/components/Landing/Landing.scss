@@ -1,0 +1,107 @@
+/* 
+Wave Text Animation Variables
+*/
+$offset: -35px;
+$count: 6;
+$duration: 0.5;
+
+@keyframes wave {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY($offset);
+  }
+}
+
+#wavetext span {
+  display: inline-block;
+  animation-duration: #{$duration}s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@for $i from 0 to $count {
+  #wavetext :nth-child(#{$count}n + #{$i}) {
+    animation-delay: -#{($count - $i) * 0.2}s;
+  }
+}
+
+/* 
+End of Wave Text Animation Variables
+*/
+
+.hero-bg {
+  height: 100vh;
+  background: #303a52 url("../../background.jpeg");
+  background-size: cover;
+}
+
+.hero-overlay {
+  background: #303a52cc;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  color: #fc85ae;
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero-bg p {
+  font-size: 1.2rem;
+  margin: 0 1em;
+  font-weight: bold;
+}
+
+.hero-bg button {
+  margin: 1.8em 0;
+  border: 4px solid #fc85ae;
+  background: none;
+  padding: 0.5em 1.2em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+@media (min-width: 400px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+  .hero-bg p {
+    font-size: 1.4rem;
+  }
+  .hero-bg button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .hero-wrapper {
+    width: 600px;
+  }
+  .hero-title {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero-wrapper {
+    width: 900px;
+  }
+  .hero-title {
+    display: inline-block;
+    font-size: 14rem;
+  }
+  .hero-bg p {
+    font-size: 2rem;
+  }
+}

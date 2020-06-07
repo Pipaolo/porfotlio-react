@@ -1,0 +1,133 @@
+.skills {
+  position: relative;
+
+  width: 100%;
+  background-color: #4b5878;
+  overflow: hidden;
+  padding: 5em 1.2em;
+}
+
+.skill-watermark {
+  position: absolute;
+  top: -0.8em;
+  left: -0.7em;
+  white-space: nowrap;
+  font-size: 40vw;
+  font-weight: 800;
+  color: #3f4c6c;
+  z-index: 0;
+}
+
+.skill-card-wrapper {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.skill-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-header {
+  position: relative;
+  color: white;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-top: 0.2em;
+}
+
+.skills-header:before {
+  content: " ";
+  position: absolute;
+  background-color: #fc85ae;
+  height: 8px;
+  width: 60px;
+  border-radius: 20px;
+  top: -10px;
+}
+
+.skill-card {
+  display: flex;
+  color: white;
+  z-index: 1;
+  margin: 0.8em 1em 0.8em 0em;
+}
+.skill-card-content {
+  margin-left: 0.5em;
+}
+
+.skill-card svg {
+  height: 100px;
+  width: 100px;
+  fill: white;
+}
+
+.skill-title {
+  font-weight: bold;
+}
+
+.skill-name {
+  background-color: #fc85ae;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.2em 0.35em;
+  border-radius: 500px;
+  margin: 0.2em 0.2em;
+}
+
+@media (min-width: 500px) {
+  .skill-card svg {
+    height: 135px;
+    width: 135px;
+    fill: white;
+  }
+
+  .skill-title {
+    font-size: 1.3rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .skills {
+    height: 100vh;
+  }
+  .skills-header:before {
+    width: 115px;
+    border-radius: 500px;
+  }
+  .skill-card svg {
+    width: auto;
+    height: 20vh;
+  }
+
+  .skills-header {
+    font-size: 3rem;
+    z-index: 1;
+  }
+
+  .skill-title {
+    font-size: 1.4rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+
+  .skills {
+    padding: 5em 5em;
+  }
+
+  .skill-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 50px;
+  }
+}

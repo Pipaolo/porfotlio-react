@@ -1,0 +1,76 @@
+.logo {
+  font-weight: bold;
+  color: #fc85ae !important;
+}
+
+.nav-bar {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  background-color: #2b354a !important;
+  z-index: 99;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+.nav-bar.fixed {
+  bottom: inherit;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar-nav a {
+  color: white;
+}
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fc85ae;
+}
+.navbar-dark .navbar-nav .nav-link.active:before {
+  background-color: #fc85ae;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fc85ae;
+}
+
+.navbar-dark .navbar-nav .nav-link:before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 0;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: all 0.5s ease;
+}
+
+.navbar-dark .navbar-nav .active > .nav-link:before,
+.navbar-dark .navbar-nav .nav-link.active:before,
+.navbar-dark .navbar-nav .nav-link.show:before,
+.navbar-dark .navbar-nav .show > .nav-link:before {
+  width: 25px;
+}
+
+@media (min-width: 992px) {
+  .navbar-dark .navbar-nav .nav-link:before {
+    margin-left: 10px;
+  }
+}
