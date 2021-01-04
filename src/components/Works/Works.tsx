@@ -29,7 +29,11 @@ export default class Works extends Component<IProps, IState> {
           <WorksCard
             image={`tracker.png`}
             description="A Realtime Covid Tracker in the Philippines."
-          />
+          />    
+          <WorksCard
+          image={`work_immersion.png`}
+          description="A realtime coaching tracker for students and teachers for scheduling and keeping track of coaching sessions."
+        />
         </div>
       </Element>
     );
