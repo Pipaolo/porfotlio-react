@@ -15,7 +15,7 @@ export default class About extends Component<IProps, IState> {
           <img src={require("../../picture.jpg")} alt="" />
         </div>
         <h4>
-          I am a full-stack mobile app, that aims to provide high-quality, fast,
+          I am a mobile and web app developer, that aims to provide high-quality, fast,
           and responsive applications.
         </h4>
       </Element>

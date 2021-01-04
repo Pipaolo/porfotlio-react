@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Contact.css";
 import { Element } from "react-scroll";
 import ContactForm from "./ContactForm";
+import {FaLinkedin} from "react-icons/fa";
 interface IProps {
   id: string;
 }
@@ -24,6 +25,10 @@ export default class Contact extends Component<IProps, IState> {
               </li>
               <li>
                 <i className="material-icons">phone</i>+639260385084
+              </li>
+              <li>
+                <FaLinkedin className="icon" size="30"/>
+                <a href="https://www.linkedin.com/in/paolo-matthew-tolentino-7483661a5/"> Paolo Matthew Tolentino</a>
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ interface IProps {
 export default function Footer({ id }: IProps) {
   return (
     <div id={id} className="footer">
-      ©<span>&nbsp;Paolo Tolentino</span>
+      ©<span>&nbsp;Paolo Matthew Tolentino</span>
     </div>
   );
 }

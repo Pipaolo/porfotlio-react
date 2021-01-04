@@ -13,14 +13,21 @@
 
 .contact li {
   display: flex;
+  align-items: center;
   font-weight: bold;
   margin-top: 10px;
 }
 
-.contact li i {
+.contact li i,
+.icon {
   color: #fc85ae;
   text-align: center;
   padding-right: 10px;
+}
+.contact li a {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
 }
 
 .contact-form-wrapper {
