@@ -19,17 +19,36 @@ export default class Skills extends Component<IProps, IState> {
           <SkillCard
             image="code"
             text="Web Development"
-            skills={["HTML", "CSS3", "JavaScript", "ReactJS", "Redux"]}
+            skills={[
+              "HTML",
+              "CSS3",
+              "JavaScript",
+              "ReactJS",
+              "Redux",
+              "NextJS",
+              "Vue",
+              "Typescript",
+            ]}
           />
           <SkillCard
             image="gear"
             text="Backend Framework"
-            skills={['Go',"Firebase", "MongoDB", "Postgres SQL", `REST API`]}
+            skills={[
+              "Go",
+              "Firebase",
+              "MongoDB",
+              "Postgres SQL",
+              `REST API`,
+              "Node.js",
+              "Express",
+              "Python",
+              "Django",
+            ]}
           />
           <SkillCard
             image="app"
             text="App Development"
-            skills={["Dart", "Kotlin", "Java", "Flutter"]}
+            skills={["Dart", "Kotlin", "Java", "Flutter", "Swift"]}
           />
         </div>
       </Element>

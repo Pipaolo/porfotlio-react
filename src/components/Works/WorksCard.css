@@ -3,15 +3,18 @@
     box-shadow: none;
   }
   to {
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
   }
 }
 
 .works-cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  width: 100%;
+  gap: 0.2rem;
+  grid-template-columns: repeat(1);
+  place-content: center;
 }
+
 .works-card {
   display: flex;
   flex-direction: column;
@@ -21,13 +24,40 @@
   color: black;
   height: 300px;
   width: 300px;
-  margin: 1em 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.works-card-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.works-card-overlay > h4 {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.works-card-overlay:hover {
+  opacity: 1;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 500ms ease-in-out;
 }
 
 .works-card:hover {
   animation-name: onHoverShadow;
-  animation-duration: 300ms;
-  animation-fill-mode: forwards;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
 }
 
 .works-card-image-wrapper {
@@ -36,7 +66,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: calc(20px - 0.5em);
   object-fit: cover;
   height: 70%;
   width: 100%;
@@ -44,27 +74,36 @@
 }
 
 .works-card img {
-  border-radius: 20px;
+  border-radius: calc(20px - 0.5em);
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   background-color: white;
 }
 
 .works-card-content {
   width: 100%;
   height: 30%;
-  padding: 0 1em;
+  padding: 1rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  overflow: hidden;
+  line-clamp: 2;
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .works-cards-wrapper {
-    height: 100%;
-    align-items: center;
+    grid-template-columns: repeat(2, 300px);
+    gap: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .works-cards-wrapper {
+    grid-template-columns: repeat(3, 300px);
+    gap: 1rem;
   }
 }
